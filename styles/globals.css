@@ -43,6 +43,7 @@ header{
   background-position: center;
   background-size:contain;
   color: transparent!important;
+  cursor: pointer;
 }
 header ul{
   display: none;
@@ -285,6 +286,14 @@ header ul li a:hover{
 }
 .link-footer a:hover{
   color: white;
-  background-color: #ba402a;
+  background-color: #3B1F1B;
+}
+@media screen and (max-width : 420px){
+  .link-footer{
+    display: flex;
+    flex-direction: column;
+    font-size: .75em;
+
+  }
 }
 
