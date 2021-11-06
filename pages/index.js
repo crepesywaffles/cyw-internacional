@@ -1,6 +1,5 @@
 
 import Image from 'next/image'
-
 import Layout from '../componentes/Layout'
 import { Carousel } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +26,7 @@ export default function Home() {
       <Layout>
         <Carousel touch interval={3000}>
           {banners && banners.map((i)=>(
-            <Carousel.Item>
+            <Carousel.Item key={i.id}>
             <div className="img1">
               <Image src={`http://www.portaldeartesanos.com${i.src.url}`} width="1200" height="500" priority objectFit="cover" layout="responsive" >
               </Image> 
