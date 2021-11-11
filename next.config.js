@@ -1,7 +1,7 @@
 module.exports = {
   
   images: {
-    domains: ['https://www.portaldeartesanos.com'],
+    domains: ['www.portaldeartesanos.com'],
   },
   
 }
