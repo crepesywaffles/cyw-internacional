@@ -10,6 +10,7 @@ import Footer from "../componentes/Footer"
 import { useEffect, useState } from 'react'
 import apiURL from "../utils/apiURL"
 import Redes from "../componentes/Redes"
+import Menus from "../componentes/Menus"
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       setBanners(res)}
   )},[])
   console.log(banners && banners.map((i)=>(i.src.url)))
+
   
   return (
     <>
@@ -29,7 +31,7 @@ export default function Home() {
           {banners && banners.map((i)=>(
             <Carousel.Item key={i.id}>
             <div className="img1">
-              <Image src={`${apiURL}${i.src.url}`} width="1200" height="450" priority objectFit="cover" layout="responsive" >
+              <Image src={`${apiURL}${i.src.url}`} width="1200" height="450" priority objectFit="cover"  layout="responsive" >
               </Image> 
             </div>
             <Carousel.Caption className="caption-carousel">
@@ -40,25 +42,7 @@ export default function Home() {
           </Carousel.Item>
           ))}
         </Carousel>
-
-        <h2 className="title-menu mt-5">Menús</h2>
-        <div className="d-flex justify-content-center flex-wrap">
-          <div className="img-menu">
-            <Link href="#"><Image src={mexicomenu}></Image></Link>
-          </div>
-          <div className="img-menu">
-            <Link href="#"><Image src={ecuadormenu}></Image></Link>
-          </div>
-          <div className="img-menu" >
-            <Link href="#"><Image src={chilemenu}></Image></Link>
-          </div>
-          <div className="img-menu">
-            <Link href="#"><Image src={españamenu}></Image></Link>
-          </div>
-          <div className="img-menu">
-            <Link href="#"><Image src={panamamenu}></Image></Link>
-          </div>
-        </div>
+        <Menus/>
         <Redes/>
         <Footer />
       </Layout>

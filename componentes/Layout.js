@@ -30,7 +30,7 @@ export default function Diseño(props) {
             <div className="toggle" onClick={menuToggle} ref={menu}></div>
             <Link href="/"><div className="brand">.</div></Link>
             <ul className="navigation" ref={navigation}>
-              <li><Link href="/"><a className=""  >Inicio</a></Link></li>
+              <li><Link href="/#"><a className=""  >Inicio</a></Link></li>
               <li><Link href="/Blog"><a className=""  >Blog</a></Link></li>
               <li><a href="/Menus" className="" >Menús</a></li>
               <li><Link href="/Domicilios" ><a className="" >Domicilios</a></Link></li>
