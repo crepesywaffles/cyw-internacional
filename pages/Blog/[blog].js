@@ -1,5 +1,7 @@
 import React from 'react'
 import Layout from '../../componentes/Layout'
+import Footer from "../../componentes/Footer"
+import Redes from "../../componentes/Redes"
 import { useRouter } from 'next/dist/client/router'
 import { useState,useEffect } from 'react'
 import apiURL from "../../utils/apiURL"
@@ -34,6 +36,8 @@ export default function Blog() {
                     </div>
                 ))}
             </div>
+            <Redes/>
+            <Footer/>
         </Layout>
     )
 }
