@@ -1,7 +1,95 @@
-import React from "react";
+import React, { useState,useEffect} from 'react';
+import axios from "axios"
+import Swal from "sweetalert2"
+import FooterLink from './FooterLink';
 
 export default function Escribenos() {
+  const [pais,setPais]= useState(null)
+  const [nombre,setNombre]= useState("")
+  const [correo,setCorreo]= useState("")
+  const [asunto,setAsunto]= useState("")
+  const [mensaje,setMensaje]= useState("")
+  
+
+  function handleChangePais(e){
+    const value = e.target.value
+    setPais(value)
+  }
+  function handleChangeName(e){
+    const value = e.target.value
+    setNombre(value)
+  }
+  function handleChangeEmail(e){
+    const value = e.target.value
+    setCorreo(value)
+  }
+  function handleChangeAsunto(e){
+    const value = e.target.value
+    setAsunto(value)
+  }
+  function handleChangeMensaje(e){
+    const value = e.target.value
+    setMensaje(value)
+  }
+  function sendNotification() {
+    switch (pais) {
+      case "Mexico":
+        var correo = "jpgarcia@crepesywaffles.com.mx";
+        break;
+      case "Ecuador":
+        var correo = "servicioslcliente@crepesywaffles.ec";
+        break;
+      case "Chile":
+        var correo = "iris.iglesias@crepesywaffles.com";
+        break;
+      case "España":
+        var correo = "info@crepesywaffles.es";
+        break;
+      case "Panama":
+        var correo = "camilo.gonzalez@crepesywaffles.com";                                                                                                                                                                                                                                                                    
+        break;
+    }
+    var data = new FormData();
+    data.append('email',correo);
+    data.append('asunto', `${asunto}`);
+    data.append('mensaje', `<p><b>Hello</b> to myself <img src="cid:note@example.com"/></p>
+    <p>Here's a nyan cat for you as an embedded attachment:<br/><img src="cid:nyan@example.com"/></p>}`);
+
+    var config = {
+      method: 'post',
+      url: 'https://www.portaldeartesanos.com/emails',
+      data: data
+    };
+    axios(config)
+      .then(function () {
+        Swal.fire({
+          title: 'confirmación',
+          text: `Tu mensaje ha sido enviado, gracias por comunicarte con nosotros`,
+          icon: 'success',
+          confirmButtonText: 'Continuar'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.reload()
+          }
+        })
+      })
+      .catch(function (error) {
+        Swal.fire({
+          title: "Error de envio",
+          text: 'Por favor complete el formulario en su totalidad.',
+          icon: 'error',
+          confirmButtonText: 'Continuar'
+        }),
+        console.log(error);
+      });
+  }
+  function handleSubmit(e){
+    e.preventDefault()
+    sendNotification()
+    
+    }
   return (
+    <>
     <div className="Container-escribenos">
       <div className="title">ESCRÍBENOS</div>
       <spam>El gusto es nuestro</spam>
@@ -14,30 +102,31 @@ export default function Escribenos() {
         </a>
         <a target="_blank" href="https://crepesywaffles.com/informaciondeinteres">.</a>
       </p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="webform">
           <div className="input-escribenos">
             <label >pais</label>
               <br />
-              <select className="select-label">
+              <select className="select-label" onChange={handleChangePais}>
                 <option>Seleccione un pais</option>
-                <option value="Barranquilla">Barranquilla</option>
-                <option value="Bogota">Bogotá (cundinamarca)</option>
-                <option value="Bucaramanga">Bucaramanga</option>
-                <option value="Cali">Cali</option>
-                <option value="Cartagena">Cartagena</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Chile">Chile</option>
+                <option value="España">España</option>
+                <option value="Panama">Panama</option>
               </select>
           </div>
           <div className="input-escribenos">
             <label>Nombre y Apellidos</label>
             <input
               id="edit-nombre-"
-              name="nombre_"
-              value=""
+              name="nombre"
+              value={nombre}
               size="60"
               maxlength="128"
               required="required"
               aria-required="true"
+              onChange={handleChangeName}
             ></input>
           </div>
           <div className="input-escribenos">
@@ -45,11 +134,11 @@ export default function Escribenos() {
             <input
               id="edit-nombre-"
               name="nombre_"
-              value=""
+              value={correo}
               size="60"
               maxlength="128"
               required="required"
-              aria-required="true"
+              onChange={handleChangeEmail}
             ></input>
           </div>
           <div className="input-escribenos">
@@ -57,28 +146,32 @@ export default function Escribenos() {
             <input
               id="edit-nombre-"
               name="nombre_"
-              value=""
+              value={asunto}
               size="60"
               maxlength="128"
               required="required"
-              aria-required="true"
+              onChange={handleChangeAsunto}
             ></input>
           </div>
           <div className="input-escribenos">
             <label>Mensaje</label>
             <textarea
-              className="form-control "
+              className="form-control"
               type="text"
               required
               spellCheck
               size="60"
               name="mensaje"
               rows="15"
+              value={mensaje}
+              onChange={handleChangeMensaje}
             ></textarea>
           </div>
           <button>Enviar</button>
         </div>
       </form>
     </div>
+    <FooterLink/>
+    </>
   );
 }

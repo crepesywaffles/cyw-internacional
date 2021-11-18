@@ -15,7 +15,7 @@ export default function Contacto() {
             <div className="banner-domicilios">
             <Image src={banner} width="1200" height="400" priority objectFit="cover" layout="responsive" >
             </Image>
-            <h2>Contacto<br/>Queremos saber de ti</h2>
+            <h3>Contacto<br/>Queremos saber de ti</h3>
             </div>
             <div className="articulos">
             <div className="articulos-body">
