@@ -40,7 +40,7 @@ export default function Escribenos() {
         var correo = "servicioslcliente@crepesywaffles.ec";
         break;
       case "Chile":
-        var correo = "iris.iglesias@crepesywaffles.com";
+        var correo = "camilo.gonzalez@crepesywaffles.com";
         break;
       case "España":
         var correo = "info@crepesywaffles.es";
@@ -52,8 +52,7 @@ export default function Escribenos() {
     var data = new FormData();
     data.append('email',correo);
     data.append('asunto', `${asunto}`);
-    data.append('mensaje', `<p><b>Hello</b> to myself <img src="cid:note@example.com"/></p>
-    <p>Here's a nyan cat for you as an embedded attachment:<br/><img src="cid:nyan@example.com"/></p>}`);
+    data.append('mensaje', `${mensaje}`);
 
     var config = {
       method: 'post',
@@ -105,10 +104,10 @@ export default function Escribenos() {
       <form onSubmit={handleSubmit}>
         <div className="webform">
           <div className="input-escribenos">
-            <label >pais</label>
+            <label >país</label>
               <br />
               <select className="select-label" onChange={handleChangePais}>
-                <option>Seleccione un pais</option>
+                <option>Seleccione un país</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Ecuador">Ecuador</option>
                 <option value="Chile">Chile</option>

@@ -27,14 +27,16 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Carousel touch interval={3000}>
+        <Carousel touch interval={4000}>
           {banners && banners.map((i)=>(
             <Carousel.Item key={i.id}>
             <div className="img1">
-              <Image src={`${apiURL}${i.src.url}`} width="1200" height="450" priority objectFit="cover"  layout="responsive" >
+              <Image src={`${apiURL}${i.src.url}`} width="1120w" height="400" priority objectFit="cover"  layout="responsive" >
               </Image> 
             </div>
             <Carousel.Caption className="caption-carousel">
+              <p className='head-banner'>{i.head}</p>
+              <div className='head-line'></div>
               <h4>{i.title}</h4>
               <p>{i.description}</p>
               <Link href={i.href}><button>Ver Más</button></Link>

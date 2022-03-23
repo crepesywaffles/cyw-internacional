@@ -1,3 +1,3 @@
-const apiURL = "https://www.portaldeartesanos.com";
+const apiURL = "http://www.portaldeartesanos.com";
 
 export default apiURL

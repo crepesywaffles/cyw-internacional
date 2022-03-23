@@ -31,7 +31,7 @@ export default function Blog() {
             {articulos && articulos.map((i)=>(
               <div className="articulos-body" key={i.id}>
                   <Link href={`Blog/${i.Titulo}`}><h2>{i.Titulo}</h2></Link>
-                  <div className="image-articule"><Image src={`${apiURL}${i.Imagen.url}`} width="449" height="400" priority objectFit="cover"></Image></div>
+                  <div className="image-articule"><Image src={`${apiURL}${i.Imagen.url}`} width="280" height="280" priority objectFit="cover"></Image></div>
               </div>
             ))}
             </div>

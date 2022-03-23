@@ -15,20 +15,20 @@ export default function Contacto() {
             <div className="banner-domicilios">
             <Image src={banner} width="1200" height="400" priority objectFit="cover" layout="responsive" >
             </Image>
-            <h3>Contacto<br/>Queremos saber de ti</h3>
+            <h3>Contacto<br/></h3><p>Queremos saber de ti</p>
             </div>
             <div className="articulos">
             <div className="articulos-body">
                   <Link href={`Contacto/Escribenos`}><h2>Escribenos</h2></Link>
-                  <div className="image-articule"><Image src={escribenos} width="449" height="400" priority objectFit="cover"></Image></div>
+                  <div className="image-articule"><Image src={escribenos} width="280" height="280" priority objectFit="cover"></Image></div>
             </div>
             <div className="articulos-body">
                   <Link href={`Contacto/Trabajos`}><h2>Trabaja con nosotros</h2></Link>
-                  <div className="image-articule"><Image src={trabaja} width="449" height="400" priority objectFit="cover"></Image></div>
+                  <div className="image-articule"><Image src={trabaja} width="280" height="280" priority objectFit="cover"></Image></div>
             </div>
             <div className="articulos-body">
                   <Link href={`Contacto/Facturacion`}><h2>Facturación Electrónica</h2></Link>
-                  <div className="image-articule"><Image src={factura} width="449" height="400" priority objectFit="cover"></Image></div>
+                  <div className="image-articule"><Image src={factura} width="280" height="280" priority objectFit="cover"></Image></div>
             </div>
             </div>
             <Redes/>
