@@ -22,15 +22,16 @@ export default function Domicilios() {
                 <a href="https://pedidos.crepesywaffles.mx/">pedidos.crepesywaffles.mx</a>
                 <h6>Rappi</h6>
                 <h6>Ubereats</h6>
-                <h6>Did food</h6>
+                <h6>Didi food</h6>
+                <h6>PedidosYa</h6>
                 </div>
 
                 <div className="img-box">
                 <Image src={ecuadordomi} width="150" height="220" priority objectFit="cover" layout="responsive"/>
                 <h4>Ecuador</h4>
                 <a href="https://pedidos.crepesywaffles.ec/">pedidos.crepesywaffles.ec</a>
-                <a href="https://api.whatsapp.com/send?phone=593991441185"  className="call-domi"><ion-icon name="call-outline"></ion-icon>+59 3991441185</a>
-                <a href="tel:+026003420" className="call-domi"><ion-icon name="call-outline"></ion-icon>+02 600 3420</a>
+                <a href="https://api.whatsapp.com/send?phone=593991441185"  className="call-domi"><ion-icon name="logo-whatsapp"></ion-icon>+59 3991441185</a>
+                <a href="tel:+59326003420" className="call-domi"><ion-icon name="call-outline"></ion-icon>+59326003420</a>
                 <h6>Rappi</h6>
                 <h6>Ubereats</h6>
                 <h6>Didi food</h6>
@@ -47,17 +48,13 @@ export default function Domicilios() {
                 <Image src={españadomi} width="150" height="220" priority objectFit="cover" layout="responsive"/>
                 <h4>España</h4>
                 <h6>Ubereats</h6>
-                <h6>Deliveroo</h6>
                 </div>
 
                 <div className="img-box">
                 <Image src={panamadomi} width="150" height="220" priority objectFit="cover" layout="responsive"/>
                 <h4>Panamá</h4>
-                <spam>Solo Marbella y Twon Center</spam>
-                <a href="tel:+507 60 137672" className="call-domi"><ion-icon name="call-outline"></ion-icon>+507 60 137 672</a>
-                <a href="tel:+507 61 534 849" className="call-domi"><ion-icon name="call-outline"></ion-icon>+507 61 534 849</a>
-                <a href="tel:+507 60 164 410" className="call-domi"><ion-icon name="call-outline"></ion-icon>+507 60 164 410</a>
-                <h6>Pedidos ya</h6>
+                <h6>PedidosYa</h6>
+                <h6>Ubereats</h6>
                 </div>
             </div>
             <Redes/>
