@@ -5,12 +5,7 @@ body {
   background-color: #FFF8E8;
 }
 
-@font-face {
-  font-family: 'Brandon-bold';
-  src: url('../public/fonts/Brandon_bld.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  }
+
 @font-face {
   font-family: 'Nitti';
   src: url('../public/fonts/NittiGroteskNormal.otf') format('opentype');
