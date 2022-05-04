@@ -24,7 +24,7 @@ export default function Menus() {
             <Link href="https://qr.precompro.com/?vendor=crepespanama" target="_blank"><a target="_blank"><Image width="200" height="200" src={panamaimagen}></Image></a></Link>
           </div>
           <div className="img-menu">
-            <Link href="https://qr.precompro.com/?vendor=crepespanama" target="_blank"><a target="_blank"><Image width="200" height="200" src={colombiaimagen}></Image></a></Link>
+            <Link href="https://qr.precompro.com/?vendor=crepesinterior" target="_blank"><a target="_blank"><Image width="200" height="200" src={colombiaimagen}></Image></a></Link>
           </div>
         </div>
         </div>

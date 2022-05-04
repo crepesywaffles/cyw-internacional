@@ -70,9 +70,7 @@ export default function Domicilios() {
                 <Image src={colombiaimagen} width="200" height="180" priority objectFit="cover" layout="responsive"/>
                 {/* <h4>Panamá</h4> */}
                 <br/>
-                
-                <h6>PedidosYa</h6>
-                <h6>Ubereats</h6>
+                <a href="https://crepesywaffles.com/domicilios">Domicilios</a>
                 </div>
             </div>
             <Redes/>
