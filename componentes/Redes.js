@@ -40,6 +40,13 @@ export default function Redes() {
               <li><a target="_blank" href="https://www.instagram.com/crepes_wafflespa/"><ion-icon name="logo-instagram"></ion-icon></a></li>
             </div>
           </div>
+          <div className="social">
+            <p>Colombia</p>
+            <div className="social_icon d-flex">
+              {/* <li><a target="_blank" href="https://www.facebook.com/CrepesyWafflesOficial/"><ion-icon name="logo-facebook"></ion-icon></a></li> */}
+              <li><a target="_blank" href="https://www.instagram.com/crepesywaffles/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </div>
+          </div>
         </div>
         </div>
     )
