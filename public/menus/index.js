@@ -1,8 +1,3 @@
-export {default as mexicomenu} from "./Mexico.svg"
-export {default as ecuadormenu} from "./Ecuador.svg"
-export {default as chilemenu} from "./Chile.svg"
-export {default as españamenu} from "./España.svg"
-export {default as panamamenu} from "./Panama.svg"
 export {default as panamaimagen} from "./Panama.jpg"
 export {default as colombiaimagen} from "./Colombia.jpg"
 export {default as ecuadorimagen} from "./Ecuador.jpg"

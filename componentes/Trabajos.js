@@ -35,19 +35,19 @@ export default function Trabajos() {
     function sendNotification() {
       switch (pais) {
         case "Mexico":
-          var correo = "jpgarcia@crepesywaffles.com.mx";
+          var correo = "jhernandez@crepesywaffles.com.mx";
           break;
         case "Ecuador":
-          var correo = "servicioslcliente@crepesywaffles.ec";
+          var correo = "seleccion@crepesywaffles.ec";
           break;
         case "Chile":
-          var correo = "camilo.gonzalez@crepesywaffles.com";
+          var correo = "iris.iglesias@crepesywaffles.com";
           break;
         case "España":
-          var correo = "info@crepesywaffles.es";
+          var correo = "monicahenao@crepesywaffles.es";
           break;
         case "Panama":
-          var correo = "camilo.gonzalez@crepesywaffles.com";                                                                                                                                                                                                                                                                    
+          var correo = "crepessa@gmail.com";                                                                                                                                                                                                                                                                    
           break;
       }
       var data = new FormData();
@@ -132,8 +132,8 @@ export default function Trabajos() {
             <div className="input-escribenos">
               <label>Correo electrónico</label>
               <input
-                id="edit-nombre-"
-                name="nombre_"
+                id="edit-correo-"
+                name="correo_"
                 value={correo}
                 size="60"
                 maxlength="128"
@@ -142,10 +142,10 @@ export default function Trabajos() {
               ></input>
             </div>
             <div className="input-escribenos">
-              <label>Adjunte CV</label>
+              <label>Contacto</label>
               <input
-                id="edit-nombre-"
-                name="nombre_"
+                id="edit-contacto-"
+                name="contacto_"
                 value={asunto}
                 size="60"
                 maxlength="128"

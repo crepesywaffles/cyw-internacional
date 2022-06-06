@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { mexicomenu, ecuadormenu, chilemenu, españamenu, panamamenu ,panamaimagen,colombiaimagen,mexicoimagen,españaimagen,ecuadorimagen,chileimagen} from "../public/menus/index"
+import {panamaimagen,colombiaimagen,mexicoimagen,españaimagen,ecuadorimagen,chileimagen} from "../public/menus/index"
 import Image from 'next/image'
 
 export default function Menus() {
